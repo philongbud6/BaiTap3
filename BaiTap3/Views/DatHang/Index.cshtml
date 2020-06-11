@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@using (Html.BeginForm(""))
+<style type="text/css">
+    .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-top:5%;
+        height:500px;
+        width:500px;
+    }
+
+        .tg td {
+            border-color: black;
+            border-style: solid;
+            border-width: 1px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            overflow: hidden;
+            padding: 10px 5px;
+            word-break: normal;
+        }
+
+        .tg th {
+            border-color: black;
+            border-style: solid;
+            border-width: 1px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            overflow: hidden;
+            padding: 10px 5px;
+            word-break: normal;
+        }
+
+        .tg .tg-0pky {
+            border-color: inherit;
+            text-align: left;
+            vertical-align: top
+        }
+</style>
+<table class="tg">
+    <thead>
+        <tr>
+            <th class="tg-0pky" style="text-align:center; font-weight:bold; font-size:20px" colspan="2">ĐƠN ĐẶT HÀNG</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="height:100px">
+            <td class="tg-0pky" colspan="2">
+                <div>
+                    <label>Khach Hang: </label>
+                    <input type="text" name="KhachHang" style="margin-left:200px"/>
+                </div>
+                <div>
+                    <label>Dia chi: </label>
+                    <input type="text" name="DiaChi"  style="margin-left:235px"/>
+                </div>
+                <div>
+                    <label>Ma So Thue: </label>
+                    <input type="text" name="MaSoThue"  style="margin-left:203px"/>
+                </div>
+            </td>
+        </tr>
+        <tr >
+            <td class="tg-0pky" style="width:250px">
+                <div>
+                    <label>Chọn Các Loại Bánh Sau:</label>
+                    @Html.DropDownList("List", null, "Xin Chọn", new { @class = "css-class" })
+                </div>
+                <div>
+                    <label>Số Lượng: </label>
+                    <input type="text" name="SoLuong" style="margin-left:30px; width:50px" />
+                </div>
+                <div>
+                    <button type="submit">Phắc diu </button>
+                </div>
+            </td>
+            <td class="tg-0pky"></td>
+        </tr>
+        <tr>
+            <td class="tg-0pky" colspan="2"></td>
+        </tr>
+    </tbody>
+</table>
